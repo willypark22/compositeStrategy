@@ -1,5 +1,5 @@
-#ifndef __COMPOSITE_H__
-#define __COMPOSITE_H__
+#ifndef __COMPONENT_H__
+#define __COMPONENT_H__
 
 class Base {
     public:
@@ -10,4 +10,4 @@ class Base {
         virtual double evaluate() = 0;
 };
 
-#endif // __COMPOSITE_H__
+#endif // __COMPONENT_H__
