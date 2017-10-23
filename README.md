@@ -12,7 +12,7 @@ would be represented with the following tree:
 
 The first expression to be executed (in this case, 7 * 4) will be at the deepest level. The result of that calculation then becomes an input to the addition (which becomes 3 + 28), and that result becomes an input to the subtraction (31 - 2). The tree is evaluated recursively from the bottom to the top, and is constructed in this particular way because of the order of operations.
 
-You will write a composite pattern for representing these expression trees. You are required to use the following base class (found in base.h):
+You will write a composite pattern for representing these expression trees. You are required to use the following base class (found in component.h):
 ```c++
 class Base{
   public: 
@@ -37,7 +37,7 @@ Notice that any parentheses that would be in the expression can be implemented i
 You are not required to implement functionality for parsing an expression, but can build the trees by instantiating nodes individually and adding them as children, as shown in the example main below. 
 
 ## Strategy Pattern
-Now that you have created your expression tree classes, we will create a strategy pattern for sorting these trees by their `evaluate()` value. You will start this by creating the **context** for the stragety; two containers, one that uses a vector to hold your trees (`class VectorContainer`), and one that uses a list (`class ListContainer`). Both of these classes hold the top node pointers of the trees, so the list or vector would be of the type <Base*>. You will implement them both using the following Container base class. 
+Now that you have created your expression tree classes, we will create a strategy pattern for sorting these trees by their `evaluate()` value. You will start this by creating the **context** for the stragety; two containers, one that uses a vector to hold your trees (`class VectorContainer`), and one that uses a list (`class ListContainer`). Both of these classes hold the top node pointers of the trees, so the list or vector would be of the type `<Base*>`. You will implement them both using the following Container base class. Each of the derived classes should have have their own .h and .cpp files. 
 ```c++
 class Container {
   protected: 
