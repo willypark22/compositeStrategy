@@ -123,10 +123,10 @@ would be represented with the following tree, with the top most node being a dec
 ![Composite Tree of equation](https://github.com/cs100/lab04_composite-strategy/blob/master/Images/CompositeTree.png)
 
 You can see how the ceiling function simply modifies the return of the statement, and that the return value at the top would be the ceiling of the equation below. You will be in charge of building three separate decorator classes, and testing each one at different levels of your system (including when decorators have children which are other decorators). Note that it is easiest to fully test a system when it holds double values rather than integer values. You must create the following classes as decorators:
-  a. Ceiling (Ceil)
-  b. Floor (Floor)
-  c. Absolute Value (Abs)
-To implement the functionality of each of these classes, you may employ the cmath library (math.h). This makes the implementation of the functionality trivial, so it is important that you are fully testing all variations of decorator composition (specifically, when an Absolute Value points to a Ceiling/Floor and vice-versa), since this is one of the more important concepts when discussing decorator patterns. You will be implementing each class independently and thoroughly testing it before moving on. **Each class should be it’s own commit** with a proper commit message.
+  a. Ceiling (`Ceil`)
+  b. Floor (`Floor`)
+  c. Absolute Value (`Abs`)
+To implement the functionality of each of these classes, you may employ the cmath library (`math.h`). This makes the implementation of the functionality trivial, so it is important that you are fully testing all variations of decorator composition (specifically, when an Absolute Value points to a Ceiling/Floor and vice-versa), since this is one of the more important concepts when discussing decorator patterns. You will be implementing each class independently and thoroughly testing it before moving on. **Each class should be it’s own commit** with a proper commit message.
 
 ## Submission
 To receive credit for this lab you must show an example program to your TA that demonstrated the full functionality of these three patterns, and must explain to your TA the structure of your composite pattern, strategy pattern and decorator pattern. 
