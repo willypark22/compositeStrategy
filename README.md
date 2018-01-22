@@ -113,6 +113,8 @@ int main() {
 };
 ```
 
+## Decorator pattern description should be here
+
 ## Submission
 To receive credit for this lab you must show an example program to your TA that demonstrated the full functionality of these two patterns, and must explain to your TA the structure of both your composite pattern and strategy pattern. 
 
