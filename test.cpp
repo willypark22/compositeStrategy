@@ -1,7 +1,9 @@
 #include <iostream>
-#include "composite.h"
-#include "vector_container.h"
-#include "list_container.h"
+
+#include "container.h"
+#include "component.h"
+#include "VectorContainer.h"
+#include "ListContainer.h"
 #include "strategy.h"
 
 using namespace std;
