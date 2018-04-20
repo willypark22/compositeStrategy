@@ -98,34 +98,4 @@ class Divide: public Operator {
 		};
 };
 
-class Absolute: public UnaryOperator {
-	public:
-		Absolute() : UnaryOperator() { };
-		Absolute(Base* num) : UnaryOperator(num) { };
-		double evaluate() {
-			if(num < 0) {
-				return abs(this->num->evaluate());
-			}
-			return this->num->evaluate();
-		}
-};
-
-class Floor: public UnaryOperator {
-	public:
-		Floor() : UnaryOperator() { };
-		Floor(Base* num) : UnaryOperator(num) { };
-		double evaluate() {
-			return floor(this->num->evaluate());
-		}
-};
-
-class Ceil: public UnaryOperator {
-	public:
-		Ceil() : UnaryOperator() { };
-		Ceil(Base* num) : UnaryOperator(num) { };
-		double evaluate() {
-			return ceil(this->num->evaluate());
-		}
-};
-
 #endif // __COMPONENT_H__
