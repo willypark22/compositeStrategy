@@ -1,10 +1,12 @@
 #ifndef __COMPONENT_H__
 #define __COMPONENT_H__
 
+#include "cmath"
+
 class Base {
     public:
         /* Constructors */
-        Base() {}
+        Base() { };
 
         /* Pure Virtual Functions */
         virtual double evaluate() = 0;
@@ -16,29 +18,29 @@ class Op: public Base {
 
 	public:
 		Op() : Base(), value(0) { };
-		Op(double value) : Base(), value(val) { };
+		Op(double value) : Base(), value(value) { };
 		double evaluate() {
 			return this->value;
 		};
 };
 
-class unaryOperator: public Base {
+class UnaryOperator: public Base {
 	protected:
 		Base* num;
 	
 	public:
-		unaryOperator() : Base() { };
-		unaryOperator(Base* num) : num(num { };
+		UnaryOperator() : Base() { };
+		UnaryOperator(Base* num) : num(num) { };
 		Base* get_num() {
-			return currentValue;
+			return num;
 		};
 		virtual double evaluate() = 0;
 };
 
-class Sqr: public unaryOperator {
+class Sqr: public UnaryOperator {
 	public:
-		Sqr() : unaryOperator() { };
-		Sqr(BAse* num) : unaryOperator(num) { };
+		Sqr() : UnaryOperator() { };
+		Sqr(Base* num) : UnaryOperator(num) { };
 		double evaluate() {
 			return this->num->evaluate() * this->num->evaluate();
 		};
@@ -46,7 +48,7 @@ class Sqr: public unaryOperator {
 
 class Operator: public Base {
 	protected:
-		Base* left, right;
+		Base* left, *right;
 
 	public:
 		Operator() : Base() { };
@@ -96,10 +98,10 @@ class Divide: public Operator {
 		};
 };
 
-class Absolute: public unaryOperator {
+class Absolute: public UnaryOperator {
 	public:
-		Absolute() : unaryOperator() { };
-		Absolute(Base* num) : unaryOperator(num) { };
+		Absolute() : UnaryOperator() { };
+		Absolute(Base* num) : UnaryOperator(num) { };
 		double evaluate() {
 			if(num < 0) {
 				return abs(this->num->evaluate());
@@ -108,19 +110,19 @@ class Absolute: public unaryOperator {
 		}
 };
 
-class Floor: public unaryOperator {
+class Floor: public UnaryOperator {
 	public:
-		Floor() : unaryOperator() { };
-		Floor(Base* num) : unaryOperator(num) { };
+		Floor() : UnaryOperator() { };
+		Floor(Base* num) : UnaryOperator(num) { };
 		double evaluate() {
 			return floor(this->num->evaluate());
 		}
 };
 
-class Ceil: public unaryOperator {
+class Ceil: public UnaryOperator {
 	public:
-		Ceil() : unaryOperator() { };
-		Ceil(Base* num) : unaryOperator(num) { };
+		Ceil() : UnaryOperator() { };
+		Ceil(Base* num) : UnaryOperator(num) { };
 		double evaluate() {
 			return ceil(this->num->evaluate());
 		}
