@@ -83,7 +83,7 @@ class Sub: public Operator {
 class Mult: public Operator {
 	public:
 		Mult() : Operator() { };
-		Mult(Base* left, Base* righ) : Operator(left, right) { };
+		Mult(Base* left, Base* right) : Operator(left, right) { };
 		double evaluate() {
 			return this->left->evaluate() * this->right->evaluate();
 		};

@@ -26,8 +26,8 @@ class listContainer: public Container {
 		};
 
 		void print() {
-			for(list<Base*>::iterator i = numList.begin(); i != numList.end(); ++i) {
-				cout << *i << " ";
+			for(list<Base*>::iterator i = numList.begin(), end = numList.end(); i != numList.end(); ++i) {
+				cout << (*i)->evaluate() << " ";
 			}
 		};
 

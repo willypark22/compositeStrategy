@@ -20,9 +20,9 @@ class VectorContainer: public Container {
 		};
 		
 		void print() {
-			vector<Base*>::iterator it;
-			for(it = vec.begin(); it != vec.end(); ++it) {
-				cout << *it << " ";
+			vector<Base*>::const_iterator it;
+			for(it = vec.begin();it != vec.end(); ++it) {
+				cout << (*it)->evaluate() << " ";
 			}
 		};
 		
