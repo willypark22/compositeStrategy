@@ -8,10 +8,18 @@ using namespace std;
 
 
 void SelectionSort::sort(Container* container) {
-	for(int i = 0; i < container->size(); i++) {
-		int min = i;
-		for(int j = i + 1; j < container->size(); j++) {
+	int i = 0;
+	int j = 0;
+	int min = 0;
+
+	for(i = 0; i < container->size(); i++) {
+		cout << "I " << container->at(i)->evaluate() << endl;		
+		min = i;
+		//cout << container->at(i)->evaluate() << endl;
+		for(j = i + 1; j < container->size(); j++) {
+			cout << "J " << container->at(j)->evaluate() << endl;	
 			if(container->at(j)->evaluate() < container->at(i)->evaluate()) {
+				cout << "A" << endl;
 				min = j;
 			}
 	

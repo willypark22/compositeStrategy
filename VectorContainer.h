@@ -31,11 +31,12 @@ class VectorContainer: public Container {
 				if(sort_function == NULL) {
 					throw 1;
 				}
+				sort_function->sort(this);
 			}
 			catch(int error_val) {
 				cout << "Error: Sort function not selected." << endl;
 			}
-			sort_function->sort(this);
+
 		};
 
 		void swap(int i, int j) {
