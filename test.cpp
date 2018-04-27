@@ -25,8 +25,10 @@ int main() {
     container->add_element(D);
     cout << "Container Before Sort: " << endl;
     container->print();
+    cout << endl;
     container->set_sort_function(new BubbleSort());
     container->sort();	
     cout << "Container After Sort: " << endl;
     container->print();
+    cout << endl;
 };
