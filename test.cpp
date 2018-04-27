@@ -13,16 +13,24 @@ int main() {
     Op* op2 = new Op(2);
     Op* op3 = new Op(4);
     Op* op4 = new Op(6);
+    Op* op5 = new Op(6.2);
+    Op* op6 = new Op(-7);
     Mult* A = new Mult(op1, op2);
     Sub* B = new Sub(op3, op4);
     Add* C = new Add(A, B);
     Sqr* D = new Sqr(C);
+    Ceil* E = new Ceil(op5);
+    Floor* F = new Floor(op5);
+    Absolute* G = new Absolute(op6);
 
     VectorContainer* container = new VectorContainer();
     //ListContainer* container = new ListContainer();
     container->add_element(A);
     container->add_element(B);
     container->add_element(D);
+    //container->add_element(E);
+    //container->add_element(F);
+    //container->add_element(G);
     cout << "Container Before Sort: " << endl;
     container->print();
     cout << endl;
@@ -31,4 +39,5 @@ int main() {
     cout << "Container After Sort: " << endl;
     container->print();
     cout << endl;
+    
 };
