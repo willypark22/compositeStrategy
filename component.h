@@ -3,6 +3,9 @@
 
 #include <cmath>
 #include <stdlib.h>
+#include <cstdlib>
+
+using namespace std;
 
 class Base {
     public:
@@ -104,10 +107,7 @@ class Absolute: public UnaryOperator {
 		Absolute() : UnaryOperator() { };
 		Absolute(Base* num) : UnaryOperator(num) { };
 		double evaluate() {
-			if(num < 0) {
-				return abs(this->num->evaluate());
-			}
-			return this->num->evaluate();
+				return abs (this->num->evaluate());
 		};
 };
 

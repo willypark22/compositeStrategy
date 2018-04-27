@@ -14,7 +14,7 @@ int main() {
     Op* op3 = new Op(4);
     Op* op4 = new Op(6);
     Op* op5 = new Op(6.2);
-    Op* op6 = new Op(-7);
+    Op* op6 = new Op(-1);
     Mult* A = new Mult(op1, op2);
     Sub* B = new Sub(op3, op4);
     Add* C = new Add(A, B);
@@ -24,17 +24,18 @@ int main() {
     Absolute* G = new Absolute(op6);
 
     VectorContainer* container = new VectorContainer();
-    //ListContainer* container = new ListContainer();
+    //listContainer* container = new listContainer();
     container->add_element(A);
     container->add_element(B);
     container->add_element(D);
-    //container->add_element(E);
-    //container->add_element(F);
-    //container->add_element(G);
+    container->add_element(E);
+    container->add_element(F);
+    container->add_element(G);
+    //cout << endl;
     cout << "Container Before Sort: " << endl;
     container->print();
     cout << endl;
-    container->set_sort_function(new BubbleSort());
+    container->set_sort_function(new SelectionSort());
     container->sort();	
     cout << "Container After Sort: " << endl;
     container->print();

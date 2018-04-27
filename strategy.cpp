@@ -12,11 +12,11 @@ void SelectionSort::sort(Container* container) {
 	int j = 0;
 	int min = 0;
 
-	for(i = 0; i < container->size(); i++) {		
+	for(i = 0; i < container->size() - 1; i++) {		
 		min = i;
 		//cout << container->at(i)->evaluate() << endl;
 		for(j = i + 1; j < container->size(); j++) {
-			if(container->at(j)->evaluate() < container->at(i)->evaluate()) {
+			if(container->at(j)->evaluate() < container->at(min)->evaluate()) {
 				min = j;
 			}
 	
@@ -24,7 +24,7 @@ void SelectionSort::sort(Container* container) {
 		}
 
 	if (i != min) {
-		container->swap(i, min);
+		container->swap(min, i);
 	}	
 	
 }		
@@ -34,9 +34,9 @@ void SelectionSort::sort(Container* container) {
 
 void BubbleSort::sort(Container* container) {
 	for (int i = 0; i < container->size() - 1; i++) {
-		for (int j = 1; j < container->size(); j++) {
-			if (container->at(i)->evaluate() > container->at(j)->evaluate()) {
-			container->swap(i, j);
+		for (int j = 0; j < container->size() - i - 1; j++) {
+			if (container->at(j)->evaluate() > container->at(j + 1)->evaluate()) {
+			container->swap(j, j + 1);
 			}
 		}
 	}
