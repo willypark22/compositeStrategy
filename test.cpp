@@ -5,6 +5,11 @@
 #include "VectorContainer.h"
 #include "ListContainer.h"
 #include "strategy.h"
+#include "Decorator.h"
+#include "Ceil.h"
+#include "Abs.h"
+#include "Floor.h"
+
 
 using namespace std;
 
@@ -21,7 +26,7 @@ int main() {
     Sqr* D = new Sqr(C);
     Ceil* E = new Ceil(op5);
     Floor* F = new Floor(op5);
-    Absolute* G = new Absolute(op6);
+    Abs* G = new Abs(op6);
 
     VectorContainer* container = new VectorContainer();
     //listContainer* container = new listContainer();
