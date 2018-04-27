@@ -119,4 +119,13 @@ class Floor: public UnaryOperator {
 		};
 };
 
+class Ceil: public UnaryOperator {
+	public:
+		Ceil() : UnaryOperator() { };
+		Floor(Base* num) : UnaryOperator(num) { };
+		double evaluate() {
+			return ceil(this->num->evaluate());
+		};
+};
+
 #endif // __COMPONENT_H__
