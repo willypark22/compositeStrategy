@@ -2,6 +2,7 @@
 #define __COMPONENT_H__
 
 #include <cmath>
+#include <stdlib.h>
 
 class Base {
     public:
@@ -122,7 +123,7 @@ class Floor: public UnaryOperator {
 class Ceil: public UnaryOperator {
 	public:
 		Ceil() : UnaryOperator() { };
-		Floor(Base* num) : UnaryOperator(num) { };
+		Ceil(Base* num) : UnaryOperator(num) { };
 		double evaluate() {
 			return ceil(this->num->evaluate());
 		};
