@@ -4,7 +4,7 @@
 class DoublePrint : public BasePrint {
 	public:
 		DoublePrint();
-		DoublePrint();
+		DoublePrint(double value): BasePrint(value) { };
 
 		void print();
 };
