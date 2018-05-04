@@ -14,6 +14,8 @@
 #include "Floor.h"
 #include "BasePrint.h"
 #include "DoublePrint.h"
+#include "BinaryPrint.h"
+#include "HexPrint.h"
 
 using namespace std;
 
@@ -47,8 +49,11 @@ int main(int argc, char* argv[]) {
     Abs* G = new Abs(op6);
 
     DoublePrint* doubleP = new DoublePrint(13.9);
-
+    BinaryPrint* binaryP = new BinaryPrint(12);
+    HexPrint* hexP = new HexPrint(3.1415926534);
     doubleP->print();
+    binaryP->print();
+    hexP->print();
 
     VectorContainer* container = new VectorContainer();
     //listContainer* container = new listContainer();
