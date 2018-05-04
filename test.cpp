@@ -1,4 +1,7 @@
 #include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <string.h>
 
 #include "container.h"
 #include "component.h"
@@ -9,11 +12,26 @@
 #include "Ceil.h"
 #include "Abs.h"
 #include "Floor.h"
-
+#include "BasePrint.h"
+#include "DoublePrint.h"
 
 using namespace std;
 
-int main() {
+int main(int argc, char* argv[]) {
+
+    /*char* s = argv[1];
+
+    BaseFactory* baf = NULL;
+    if(strcmp(s,"d")==0) {
+    	baf = new DoubleFactory();
+    }
+    else if(strcmp(s,"h")==0) {
+	baf = new HexFactory();
+    }
+    else {
+	baf = new BinaryFactory();
+    }*/
+
     Op* op1 = new Op(5);
     Op* op2 = new Op(2);
     Op* op3 = new Op(4);
@@ -27,6 +45,10 @@ int main() {
     Ceil* E = new Ceil(op5);
     Floor* F = new Floor(op5);
     Abs* G = new Abs(op6);
+
+    DoublePrint* doubleP = new DoublePrint(13.9);
+
+    doubleP->print();
 
     VectorContainer* container = new VectorContainer();
     //listContainer* container = new listContainer();
