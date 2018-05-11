@@ -7,8 +7,11 @@ using namespace std;
 
 HexPrint::HexPrint() { }
 
+HexPrint::HexPrint(double val) {
+	value = val;
+}
+
 void HexPrint::print() {
-	cout << setprecision(5);
-	cout << hexfloat;
-	cout << value << endl;
+	printf("%a", value);
+	cout << endl;
 }

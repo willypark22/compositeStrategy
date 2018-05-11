@@ -23,12 +23,12 @@
 
 #include "BasePrint.h"
 #include "BinaryPrint.h"
-//#include "HexPrint.h" fixme include hexprint later
+#include "HexPrint.h"
 #include "DoublePrint.h"
 
 #include "DoubleFactory.h"
 #include "BinaryFactory.h"
-//#include "HexFactory.h"
+#include "HexFactory.h"
 
 
 using namespace std;
@@ -51,7 +51,7 @@ while (validFlag != 1) {
         validFlag = 1;
     }
     else if (flag == "h") {
-        //factoryType = new HexFactory();
+        factoryType = new HexFactory();
         validFlag = 1;
     }
     else if (flag == "b") {

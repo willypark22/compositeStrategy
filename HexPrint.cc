@@ -6,9 +6,11 @@ using namespace std;
 
 HexPrint::HexPrint() { }
 
-void HexPrint::print() {
-	//cout << setprecision(5);
+HexPrint::HexPrint(double val) {
+	value = val;
+}
 
-	//cout << hexfloat;
-	cout << value << endl;
+void HexPrint::print() {
+	cout.precision(5);
+	cout << hexfloat << value << endl;
 }
