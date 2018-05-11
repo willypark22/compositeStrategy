@@ -4,10 +4,9 @@
 #include "component.h"
 
 class Ceil : public Decorator {
-	public:
-		Ceil();
-		Ceil(Base*);
-		double evaluate();
+    public:
+        Ceil();
+        Ceil(Base*);
+        double evaluate();
 };
-
 #endif

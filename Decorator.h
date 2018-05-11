@@ -1,18 +1,17 @@
-#ifndef _DECORATOR_H_
-#define _DECORATOR_H_
+#ifndef __DECORATOR_H__
+#define __DECORATOR_H__
 #include "component.h"
 
 class Decorator : public Base {
+    protected:
+        Base* decorated;
 
-	protected:
-		Base* decorated;
-		
-	public:
-		Decorator();
-		Decorator(Base* );
-		
-		virtual double evaluate() = 0;
-
+    public:
+        /* Constructors */
+        Decorator();
+        Decorator(Base*);
+        
+        virtual double evaluate() = 0;
 };
 
 #endif

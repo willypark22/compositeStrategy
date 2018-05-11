@@ -1,14 +1,17 @@
-#ifndef __HexPrint_H__
-#define __HexPrint_H__
-
+#ifndef __HEXPRINT_H__
+#define __HEXPRINT_H__
 #include "BasePrint.h"
 
 class HexPrint : public BasePrint {
-	public:
+	private:
+		/* Value to Print */
+		double value;    
+    
+    public:
+        /* Constructors */
 		HexPrint();
-		HexPrint(double value) : BasePrint(value) { };
+		HexPrint(double val);
 		
-		void print();
+        void print();
 };
-
 #endif

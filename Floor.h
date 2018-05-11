@@ -4,9 +4,9 @@
 #include "component.h"
 
 class Floor : public Decorator {
-	public:
-		Floor();
-		Floor(Base*);
-		double evaluate();
+    public:
+        Floor();
+        Floor(Base*);
+        double evaluate();
 };
 #endif

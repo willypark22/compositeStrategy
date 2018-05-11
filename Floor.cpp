@@ -8,12 +8,11 @@ using namespace std;
 Floor::Floor() {}
 
 Floor::Floor(Base* decor) {
-	decorated = decor;
+    decorated = decor;
 }
 
 double Floor::evaluate() {
-	double ans = floor(decorated->evaluate());
-	
-	return ans;
-	
+    double ans = floor(decorated->evaluate());
+    
+    return ans;
 }

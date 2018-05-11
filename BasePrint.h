@@ -1,8 +1,8 @@
-#ifndef __BasePrint_H__
-#define __BasePrint_H__
+#ifndef __BASEPRINT_H__
+#define __BASEPRINT_H__
 
 class BasePrint {
-	protected: 
+	private:
 		/* Value to Print */
 		double value;
 
@@ -10,9 +10,8 @@ class BasePrint {
 		/* Constructors */
 		BasePrint();
 		BasePrint(double val);
-
-		/* Pure Virutal Print Function */
+		
+		/* Pure Virtual Print Function */
 		virtual void print() = 0;
 };
-
 #endif

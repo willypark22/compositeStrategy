@@ -1,59 +1,30 @@
-#ifndef LISTCONTAINER_H
-#define LISTCONTAINER_H
+#ifndef __LISTCONTAINER_H__
+#define __LISTCONTAINER_H__
 
+#include <iostream>
 #include <list>
-#include <iterator>
-#include <cstdlib>
-
-#include "container.h"
-#include "strategy.h"
+#include "Container.h"
+#include "component.h" //base
+#include "Sort.h"
+#include "BaseFactory.h"
 
 using namespace std;
 
-class listContainer: public Container {
-	private:
-		list<Base*> numList;
-	
-	public:
-		void add_element(Base* element) {
-			numList.push_back(element);
-		};
+class ListContainer : public Container {
+protected:
+    list<Base*> container;
+    
+public:
+    ListContainer();
+    ListContainer(Sort* function);
+    ListContainer(BaseFactory* factory);
+    void set_sort_function(Sort* newSortFunction);
 
-		Base* at(int i) {
-			list<Base*>::iterator it = numList.begin();
-			advance(it, i);
-			return *it;
-		};
-
-		void print() {
-			for(list<Base*>::iterator i = numList.begin(), end = numList.end(); i != numList.end(); ++i) {
-				cout << (*i)->evaluate() << " ";
-			}
-		};
-
-		void sort() {
-			try {
-				if(sort_function == NULL) {
-					throw 1;
-				}
-			}
-			catch(int error_val) {
-				cout << "Error: Sort function not selected." << endl;
-			}
-			sort_function->sort(this);
-		};
-
-		void swap(int i, int j) {
-			list<Base*>::iterator first = numList.begin();
-			list<Base*>::iterator second = numList.begin();
-			advance(first, i);
-			advance(second, j);
-			std::swap(*first, *second);
-		};
-
-		int size() {
-			return numList.size();
-		};
+    void add_element(Base*);
+    void print();
+    void sort();
+    void swap(int i, int j);
+    Base* at(int i);
+    unsigned size();
 };
-
 #endif

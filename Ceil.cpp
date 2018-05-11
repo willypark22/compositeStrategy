@@ -8,11 +8,11 @@ using namespace std;
 Ceil::Ceil() {}
 
 Ceil::Ceil(Base* decor) {
-	decorated = decor;
+    decorated = decor;
 }
 
 double Ceil::evaluate() {
-	double ans = ceil(decorated->evaluate());
-
-	return ans;
+    double ans = ceil(decorated->evaluate());
+    
+    return ans;
 }

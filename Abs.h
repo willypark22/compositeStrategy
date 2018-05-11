@@ -4,9 +4,9 @@
 #include "component.h"
 
 class Abs : public Decorator {
-	public:
-		Abs();
-		Abs(Base*);
-		double evaluate();
+    public:
+        Abs();
+        Abs(Base*);
+        double evaluate();
 };
 #endif

@@ -1,14 +1,17 @@
-#ifndef __BinaryPrint_H__
-#define __BinaryPrint_H__
-
+#ifndef __BINARYPRINT_H__
+#define __BINARYPRINT_H__
 #include "BasePrint.h"
 
 class BinaryPrint : public BasePrint {
-	public:
+	private:
+		/* Value to Print */
+		double value;    
+    
+    public:
+        /* Constructors */
 		BinaryPrint();
-		BinaryPrint(double value) : BasePrint(value) { };
-
-		void print();
+		BinaryPrint(double val);
+		
+        void print();
 };
-
 #endif
