@@ -1,16 +1,17 @@
-#include <iostream>
-
-#include "BasePrint.h"
 #include "DoublePrint.h"
+#include <iostream>
 
 using namespace std;
 
-DoublePrint::DoublePrint() { }
+//basic constructor
+DoublePrint::DoublePrint() { 
+    value = 0; 
+}
 
-/*DoublePrint::DoublePrint(double val) {
-	value = val;
-}*/
+DoublePrint::DoublePrint(double val) {
+    value = val;
+}
 
 void DoublePrint::print() {
-	cout << value << endl;
-}	
+    cout << value << endl; // Value already a double
+}
