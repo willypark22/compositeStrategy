@@ -28,7 +28,7 @@
 
 #include "DoubleFactory.h"
 #include "BinaryFactory.h"
-#include "HexFactory.h"
+//#include "HexFactory.h"
 
 
 using namespace std;
@@ -51,7 +51,7 @@ while (validFlag != 1) {
         validFlag = 1;
     }
     else if (flag == "h") {
-        factoryType = new HexFactory();
+        //factoryType = new HexFactory();
         validFlag = 1;
     }
     else if (flag == "b") {
@@ -96,8 +96,8 @@ listCont->print();
 
 
 // >>>>>>>>>>>>>>>>>>>>LAB4 TESTS START HERE<<<<<<<<<<<<<<<<<<<<<<
-/*
-cout << "Testing DoublePrint: " << endl;
+
+/*cout << "Testing DoublePrint: " << endl;
     DoublePrint* dp = new DoublePrint(c->evaluate());
     dp->print();
 
